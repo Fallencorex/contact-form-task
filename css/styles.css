@@ -5,6 +5,15 @@
         rgb(235, 225, 235), rgb(255, 255, 255) 700px);
   }
 
+  @media (max-width: 767px) {
+    .app {
+      width: 393px;
+      height: 2128px;
+      background: radial-gradient(ellipse closest-side at 10% 10%,
+        rgb(235, 225, 235), rgb(255, 255, 255) 350px);
+    }
+  }
+
   .main-wrapper__fields {
     position: absolute;
     width: 630px;
@@ -13,12 +22,21 @@
     top: 138px;
   }
 
+  @media (max-width: 767px) {
+    .main-wrapper__fields {
+      width: 351px;
+      height: 1193px;
+      left: 20px;
+      top: 77px;
+    }
+  }
+
   .fields__contact-wrapper {
     display: grid;
     grid-template-columns: 100%;
   }
 
-  .contact-wrapper__title, 
+  .contact-wrapper__title,
   .contact-wrapper__description {
     font-style: normal;
     color: #1A1A1A;
@@ -46,6 +64,15 @@
     grid-template-rows: repeat(3, 64px);
     gap: 32px;
     margin-bottom: 35px;
+  }
+
+  @media (max-width: 767px) {
+    .fields__entry-wrapper-top {
+      grid-template-columns: 351px;
+      grid-template-rows: repeat(6, 64px);
+      gap: 37px;
+      margin-bottom: 31px;
+    }
   }
 
   .entry-wrapper__input,
@@ -81,6 +108,16 @@
     gap: 15px;
     margin-bottom: 51px;
   }
+
+  @media (max-width: 767px) {
+    .fields__entry-wrapper-bottom {
+      grid-template-columns: 351px;
+      gap: 43px;
+      margin-bottom: 36px;
+    }
+  }
+
+  
 
   .entry-wrapper__submit {
     width: 221.22px;
