@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voodoo Ecom</title>
+    <link href="https://fonts.cdnfonts.com/css/avenir-next-cyr" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/inter" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
     <div class="app">
-        <div class="main-wrapper">
             <div class="main-wrapper__fields">
                 <div class="fields__contact-wrapper">
                     <div class="contact-wrapper__title"><span>Contact Us</span></div>
                     <div class="contact-wrapper__description"><span>The Voodoo team is looking forward to hearing from you!</span></div>
                 </div>
-                <div class="fields__entry-wrapper">
+                <div class="fields__entry-wrapper-top">
                     <input type="text" class="entry-wrapper__input" placeholder="Full Name*">
                     <input type="text" class="entry-wrapper__input" placeholder="Title/Position*">
                     <select class="entry-wrapper__select">
@@ -32,14 +34,14 @@
                         <option value="">Option 4</option>
                         <option value="">Option 5</option>
                     </select>
+                </div>
+                <div class="fields__entry-wrapper-bottom">
                     <input type="text" class="entry-wrapper__input" placeholder="Type of Inquiry*">
                     <input type="text" class="entry-wrapper__input" placeholder="Enter Message*">
-                    <input type="submit" class="entry-wrapper__submit" value="Send Message" />
                 </div>
+                    <input type="submit" class="entry-wrapper__submit" value="Send Message" />
             </div>
             <div class="main-wrapper__map"></div>
-        </div>
     </div>
-
 </body>
 </html>

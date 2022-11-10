@@ -1,0 +1,118 @@
+  .app {
+    width: 1440px;
+    height: 1500px;
+    background: radial-gradient(ellipse closest-side at 10% 10%,
+        rgb(235, 225, 235), rgb(255, 255, 255) 700px);
+  }
+
+  .main-wrapper__fields {
+    position: absolute;
+    width: 630px;
+    height: 974px;
+    left: 150px;
+    top: 138px;
+  }
+
+  .fields__contact-wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+  }
+
+  .contact-wrapper__title, 
+  .contact-wrapper__description {
+    font-style: normal;
+    color: #1A1A1A;
+  }
+
+  .contact-wrapper__title {
+    font-family: 'Avenir Next Cyr Medium', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 13px;
+  }
+
+  .contact-wrapper__description {
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 35px;
+  }
+
+  .fields__entry-wrapper-top {
+    display: grid;
+    grid-template-columns: 299px 299px;
+    grid-template-rows: repeat(3, 64px);
+    gap: 32px;
+    margin-bottom: 35px;
+  }
+
+  .entry-wrapper__input,
+  .entry-wrapper__select {
+    padding: 18px 19px;
+    background: #FFFFFF;
+    box-shadow: 0px 16px 32px rgba(202, 203, 210, 0.25);
+    border-radius: 8px;
+    border-style: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #1A1A1A;
+  }
+
+  .entry-wrapper__select {
+    height: 100%;
+    margin-bottom: 13px;
+    border: none;
+    color: gray;
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .fields__entry-wrapper-bottom {
+    display: grid;
+    grid-template-columns: 628px;
+    grid-template-rows: 64px 338px;
+    gap: 15px;
+    margin-bottom: 51px;
+  }
+
+  .entry-wrapper__submit {
+    width: 221.22px;
+    height: 57px;
+    background: #1A1A1A;
+    border-radius: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    cursor: pointer;
+    color: #FFFFFF;
+  }
+
+  .main-wrapper__map {
+    position: absolute;
+    width: 470px;
+    height: 936px;
+    left: 820px;
+    top: 157px;
+    border-color: rgb(255, 0, 0);
+    border-radius: 2px;
+    border-style: double;
+  }
+
+  .entry-wrapper__input:focus {
+    border-style: none;
+  }
+
+  .entry-wrapper__submit:active {
+    margin: 2px 1px;
+    background: #242424;
+  }
