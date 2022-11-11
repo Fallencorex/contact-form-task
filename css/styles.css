@@ -117,8 +117,6 @@
     }
   }
 
-  
-
   .entry-wrapper__submit {
     width: 221.22px;
     height: 57px;
@@ -134,15 +132,22 @@
     color: #FFFFFF;
   }
 
-  .main-wrapper__map {
+  #main-wrapper__map {
     position: absolute;
     width: 470px;
     height: 936px;
     left: 820px;
     top: 157px;
-    border-color: rgb(255, 0, 0);
-    border-radius: 2px;
-    border-style: double;
+  }
+
+  @media (max-width: 767px) {
+    #main-wrapper__map {
+      position: absolute;
+      width: 353px;
+      height: 573px;
+      left: 20px;
+      top: 1422px;
+    }
   }
 
   .entry-wrapper__input:focus {
