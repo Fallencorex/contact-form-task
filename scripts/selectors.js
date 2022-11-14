@@ -15,14 +15,26 @@ class Selectors {
             });
             // Creating a custom select
             const newSelector = document.createElement("div");
-            newSelector.className = "entry-wrapper__select";
-            newSelector.textContent = defValueOfSelect;
+            newSelector.className = "select-wrapper__select";
+            
+            const headSelector = document.createElement("div");
+            headSelector.className = "select__head";
+            newSelector.appendChild(headSelector);
+
+            const pickArea = document.createElement("div");
+            pickArea.textContent = defValueOfSelect;
+            headSelector.appendChild(pickArea);
+
+            const optionWrapper = document.createElement("div");
+            optionWrapper.className = "select__option-wrapper";
+            newSelector.appendChild(optionWrapper);
+            optionWrapper.style.display = "none";
+
             for (let i = 1; i < totalOptions; i++) {
                 const option = document.createElement("div");
                 option.className = "select__option";
                 option.textContent = "Option " + i;
-                // option.style.display = "none";
-                newSelector.appendChild(option);
+                optionWrapper.appendChild(option);
             }
             const appendSelector = document.getElementsByClassName(nameOfParent);
             appendSelector[0].appendChild(newSelector);
