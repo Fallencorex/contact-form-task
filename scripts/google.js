@@ -1,3 +1,4 @@
+import elementCreator from "./functions.js"
 
 let targetMap;
 let targetMarker;
@@ -6,19 +7,6 @@ const epicenter = {
   lng: -80.51332010195947
 }
 
-
-const elementCreator = (elementType, className, textContent, imgSrc) => {
-  const createElement = document.createElement(elementType);
-  if (className)
-  createElement.className = className;
-  if (textContent)
-  createElement.textContent = textContent;
-  if (elementType === "img")
-  createElement.src = imgSrc;
-  return createElement;
-}
-
-// Don’t repeat yourself
 const wrapperDiv = elementCreator("div", "map-wrapper");
 const infoAreaDiv = elementCreator("div", "map-wrapper__info");
 const titleAreaDiv = elementCreator("div", "info__title", "Voodoo");
