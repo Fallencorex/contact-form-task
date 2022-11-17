@@ -5,10 +5,29 @@ const epicenter = {
   lat: 43.45306860628035, 
   lng: -80.51332010195947
 }
-const wrapperDiv = document.createElement("div");
-const infoAreaDiv = document.createElement("div");
-const titleAreaDiv = document.createElement("div");
-const descAreaDiv = document.createElement("div");
+
+
+const elementCreator = (elementType, className, textContent, imgSrc) => {
+  const createElement = document.createElement(elementType);
+  if (className)
+  createElement.className = className;
+  if (textContent)
+  createElement.textContent = textContent;
+  if (elementType === "img")
+  createElement.src = imgSrc;
+  return createElement;
+}
+
+// Don’t repeat yourself
+const wrapperDiv = elementCreator("div", "map-wrapper");
+const infoAreaDiv = elementCreator("div", "map-wrapper__info");
+const titleAreaDiv = elementCreator("div", "info__title", "Voodoo");
+const descAreaDiv = elementCreator("div", "info__description", "137 Glasgow St., Unit 115 Kitchener, ON N2G 4X8 Ukraine");
+const contactWrapper = elementCreator("div", "info__contact-wrapper");
+const phoneImage = elementCreator("img", "", "", "./resources/images/phone.png");
+const numberAreaDiv = elementCreator("div", "", "1-800-480-9597");
+const mailImage = elementCreator("img", "", "", "./resources/images/mail.png");
+const mailAreaDiv = elementCreator("div", "", "info@voodoo.com");
 
 function initMap() {
     const data = {
@@ -56,38 +75,14 @@ function initMap() {
 
     targetMap.setOptions({ styles: mapStyles.default });
 
-    ///////////////////////////////
-    wrapperDiv.style.width = "100%";
-    wrapperDiv.style.height = "100%";
-    ///////////////////////////////
-    infoAreaDiv.style.position = "absolute";
-    infoAreaDiv.style.backgroundColor = "#FFFFFF";
-    infoAreaDiv.style.width = "244px";
-    infoAreaDiv.style.height = "161px";
-    infoAreaDiv.style.left = "125px";
-    infoAreaDiv.style.top = "256px";
-    infoAreaDiv.style.borderStyle = "none";
-    infoAreaDiv.style.borderRadius = "8px"
-    infoAreaDiv.style.boxShadow = "0px 15px 30px rgba(220, 221, 243, 0.25)";
-    infoAreaDiv.style.color = "rgb(26,26,26)";
-    infoAreaDiv.style.fontFamily = "Inter";
-    infoAreaDiv.style.fontStyle = "normal";
-    infoAreaDiv.style.fontSize = "12px";
-    infoAreaDiv.style.lineHeight = "20px";
-    infoAreaDiv.style.textAlign = "left";
-    infoAreaDiv.style.padding = "20px 38px 61px 19px";
-    ///////////////////////////////
-    infoAreaDiv.style.width = "187px";
-    infoAreaDiv.style.height = "80px";
-    titleAreaDiv.textContent = "Voodoo";
-    infoAreaDiv.style.fontWeight = "700";
-    ///////////////////////////////
-    descAreaDiv.textContent = "137 Glasgow St., Unit 115 Kitchener, ON N2G 4X8Ukraine";
-    descAreaDiv.style.fontWeight = "350";
-
+    contactWrapper.appendChild(phoneImage);
+    contactWrapper.appendChild(numberAreaDiv);
+    contactWrapper.appendChild(mailImage);
+    contactWrapper.appendChild(mailAreaDiv);
     wrapperDiv.appendChild(infoAreaDiv);
     infoAreaDiv.appendChild(titleAreaDiv);
     infoAreaDiv.appendChild(descAreaDiv);
+    infoAreaDiv.appendChild(contactWrapper);
 
     targetMap.controls[google.maps.ControlPosition.CENTER].push(wrapperDiv);
 }
